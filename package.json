@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pnpm gzip",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "gzip": "node ./scripts/gzip.mjs"
   },
   "dependencies": {
-    "astro": "^2.0.18"
+    "astro": "^2.0.18",
+    "chalk": "^5.2.0"
   },
   "devDependencies": {
-    "astro-compress": "1.1.35"
+    "astro-compress": "1.1.35",
+    "gzip-size": "^7.0.0"
   }
 }
