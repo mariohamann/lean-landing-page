@@ -19,6 +19,8 @@ function traverseFolder(folderPath) {
   const files = readdirSync(folderPath, { withFileTypes: true });
 
   files.forEach((file) => {
+    if (file.name.endsWith('.br') || file.name.endsWith('.gz')) return; // Skip brotli and gzip files (if any
+
     const filePath = path.join(folderPath, file.name);
     const stats = statSync(filePath);
 
