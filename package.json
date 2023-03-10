@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && pnpm gzip",
+    "build": "astro build && pnpm glyphhanger && pnpm gzip",
     "preview": "astro preview",
     "astro": "astro",
+    "glyphhanger": "node ./scripts/glyphhanger.mjs",
     "gzip": "node ./scripts/gzip.mjs"
   },
   "dependencies": {
