@@ -40,6 +40,7 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ['Jomhuria', 'sans-serif'],
+        sans: ['Nunito', 'sans-serif'],
       },
     },
   },

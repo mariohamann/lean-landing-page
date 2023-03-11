@@ -3,10 +3,13 @@ import fs from 'fs';
 
 // Define the command to run
 const fontsDir = './dist/fonts';
-const command = `glyphhanger ./dist/index.html --string --jsdom --cssSelector=".font-display, .font-display *" --subset=${fontsDir}/jomhuria.woff2 --output=${fontsDir}`;
+const command = (fontName, selector) => `glyphhanger ./dist/index.html --string --jsdom --cssSelector="${selector}" --subset=${fontsDir}/${fontName}.woff2 --output=${fontsDir}`;
 // Run the command
 console.log('Running command...');
-execSync(command, { stdio: 'inherit' });
+
+execSync(command('jomhuria', '.font-display, .font-display *'), { stdio: 'inherit' });
+execSync(command('nunito-400', '*'), { stdio: 'inherit' });
+execSync(command('nunito-700', '.font-bold, .font-bold *'), { stdio: 'inherit' });
 
 // Remove the original files
 console.log('Removing original files...');
