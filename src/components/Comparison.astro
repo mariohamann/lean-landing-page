@@ -1,0 +1,22 @@
+---
+export interface Props {
+	title: string;
+	percentage: number;
+	description: string;
+}
+
+const { title, percentage, description } = Astro.props;
+---
+
+<div class='w-full'>
+	<h3
+		class='text-left font-bold text-lg tracking-wider mb-3'
+		set:html={title}
+	/>
+	<div class='flex items-center justify-between'>
+		<div class='w-full border border-sec rounded-md overflow-hidden'>
+			<div class='h-5 bg-sec' style={`width: ${percentage * 100}%`}></div>
+		</div>
+	</div>
+	<div class='text-center mt-2 text-sec-900'>{description}</div>
+</div>

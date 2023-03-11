@@ -1,26 +1,42 @@
-<div class='bg-white'>
+---
+import Comparison from "../components/Comparison.astro";
+---
+
+<div class='bg-pri'>
 	<div class='py-24 px-6 sm:px-6 sm:py-32 lg:px-8'>
 		<div class='mx-auto max-w-2xl text-center'>
 			<h2
-				class='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'
+				class='text-6xl font-bold text-sec-900 tracking-widest font-display'
 			>
-				Boost your productivity.<br />Start using our app today.
+				WHY
 			</h2>
-			<p class='mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600'>
-				Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-				anim id veniam aliqua proident excepteur commodo do ea.
+			<p class='mx-auto mt-6 max-w-xl text-lg leading-8 text-sec'>
+				Esse magna occaecat laborum cillum exercitation occaecat
+				proident culpa. Elit ut amet id ex adipisicing. Proident
+				exercitation eu ut exercitation ut magna et aliquip ea magna
+				enim id. Elit enim sunt nulla adipisicing sit mollit
+				reprehenderit laboris duis pariatur. Occaecat minim excepteur ex
+				sit ipsum aliqua commodo ullamco. Esse aliquip tempor laboris
+				ullamco nostrud fugiat labore.
 			</p>
-			<div class='mt-10 flex items-center justify-center gap-x-6'>
-				<a
-					href='#'
-					class='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-					>Get started</a
-				>
-				<a
-					href='#'
-					class='text-sm font-semibold leading-6 text-gray-900'
-					>Learn more <span aria-hidden='true'>→</span>
-				</a>
+			<div
+				class='mt-10 flex flex-col items-center justify-center gap-y-8'
+			>
+				<Comparison
+					title='Page weight'
+					percentage={56 / 2000}
+					description='56 vs. 2000 kB'
+				/>
+				<Comparison
+					title='CO<sub>2</sub> per visit'
+					percentage={0.01 / 1.76}
+					description='0.01 vs. 1.76 g'
+				/>
+				<Comparison
+					title='Time to interactive (mobile)'
+					percentage={0.3 / 15.2}
+					description='0.3 vs. 15.2 sec'
+				/>
 			</div>
 		</div>
 	</div>

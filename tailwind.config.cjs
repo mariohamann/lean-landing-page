@@ -37,12 +37,15 @@ module.exports = {
         DEFAULT: '#21171d'
       },
     },
-    extend: {
-      fontFamily: {
-        display: ['Jomhuria', 'sans-serif'],
-        sans: ['Nunito', 'sans-serif'],
-      },
+
+    fontFamily: {
+      display: ['Jomhuria', 'sans-serif'],
+      sans: ['Nunito', 'sans-serif'],
     },
+    fontWeight: {
+      regular: 400,
+      bold: 700,
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
