@@ -7,33 +7,31 @@ export interface Props {
 const { title, content } = Astro.props;
 ---
 
-<div>
-	<details class='group'>
-		<summary
-			class='py-6 cursor-pointer bg-transparent transition-all hover:bg-black/20 group-open:bg-black/10 px-4 list-none flex w-full items-start justify-between text-left text-white'
-		>
-			<span class='text-lg font-bold leading-7'>{title}</span>
-			<span class='ml-6 flex h-7 items-center'>
-				<svg
-					class='h-6 w-6 group-open:rotate-[135deg] transition-transform duration-300 ease-in-out'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke-width='1.5'
-					stroke='currentColor'
-					aria-hidden='true'
-				>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M12 6v12m6-6H6'></path>
-				</svg>
-			</span>
-		</summary>
-		<div class='mt-4 pr-12 content pb-6 px-4'>
-			<p class='text-base leading-7 text-gray-300' set:html={content} />
-		</div>
-	</details>
-</div>
+<details class='group -mx-4'>
+	<summary
+		class='py-6 cursor-pointer bg-transparent transition-all hover:bg-black/20 group-open:bg-black/10 px-4 list-none flex w-full items-start justify-between text-left text-white'
+	>
+		<span class='text-lg font-bold leading-7'>{title}</span>
+		<span class='ml-6 flex h-7 items-center'>
+			<svg
+				class='h-6 w-6 group-open:rotate-[135deg] transition-transform duration-300 ease-in-out'
+				fill='none'
+				viewBox='0 0 24 24'
+				stroke-width='1.5'
+				stroke='currentColor'
+				aria-hidden='true'
+			>
+				<path
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					d='M12 6v12m6-6H6'></path>
+			</svg>
+		</span>
+	</summary>
+	<div class='mt-4 pr-12 content pb-6 px-4'>
+		<p class='text-base leading-7 text-gray-300' set:html={content} />
+	</div>
+</details>
 
 <style>
 	details > summary::-webkit-details-marker {
