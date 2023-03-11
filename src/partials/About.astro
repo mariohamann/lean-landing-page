@@ -1,7 +1,14 @@
+---
+// There is no other way to get the form out of the fence. :)
+const SUBMIT_FORM_URL = import.meta.env.PROD
+	? "https://submit-form.com/YnAwZjk5"
+	: "https://submit-form.com/echo";
+---
+
 <script>
 	document.querySelector("form").addEventListener("submit", (_event) => {
 		_event.preventDefault();
-		fetch("https://submit-form.com/echo", {
+		fetch(_event.srcElement.dataset.url, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -36,7 +43,10 @@
 				voluptate. Eiusmod consectetur aute nostrud nostrud
 				reprehenderit enim culpa eiusmod ea culpa est.
 			</p>
-			<form class='mx-auto mt-10 flex max-w-md'>
+			<form
+				class='mx-auto mt-10 flex max-w-md'
+				data-url={SUBMIT_FORM_URL}
+			>
 				<label for='email-address' class='sr-only'>Email address</label>
 				<input
 					id='email-address'
