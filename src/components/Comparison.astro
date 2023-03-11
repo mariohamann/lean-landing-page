@@ -8,6 +8,38 @@ export interface Props {
 const { title, percentage, description } = Astro.props;
 ---
 
+<script>
+	const bars = document.querySelectorAll(".animatable-bar");
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			console.log("observed", { bars });
+			if (entry.isIntersecting) {
+				const bar = entry.target;
+				bar.classList.add("animate-bar");
+				// observer.unobserve(bar);
+			}
+		});
+	});
+	console.log(bars);
+	bars.forEach((bar) => observer.observe(bar));
+</script>
+
+<style>
+	.animate-bar {
+		animation: fill-bar 2.5s ease-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fill-bar {
+		from {
+			width: 100%;
+		}
+		to {
+			width: var(--percentage, 0%);
+		}
+	}
+</style>
+
 <div class='w-full'>
 	<h3
 		class='text-left font-bold text-lg tracking-wider mb-3'
@@ -15,7 +47,11 @@ const { title, percentage, description } = Astro.props;
 	/>
 	<div class='flex items-center justify-between'>
 		<div class='w-full border border-sec rounded-md overflow-hidden'>
-			<div class='h-5 bg-sec' style={`width: ${percentage * 100}%`}></div>
+			<div
+				class='h-5 bg-sec animatable-bar'
+				style={`--percentage: ${percentage * 100}%`}
+			>
+			</div>
 		</div>
 	</div>
 	<div class='text-center mt-2 text-sec-900'>{description}</div>
