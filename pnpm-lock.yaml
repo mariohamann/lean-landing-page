@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/tailwind': ^3.1.0
+  '@tailwindcss/forms': ^0.5.3
   astro: ^2.1.0
   astro-compress: 1.1.35
   astro-compressor: ^0.3.0
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@astrojs/tailwind': 3.1.0_5fkwwuzubt6borit3q7k7y2k74
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
   astro: 2.1.2
   chalk: 5.2.0
   tailwindcss: 3.2.7
@@ -649,6 +651,15 @@ packages:
     dependencies:
       deepmerge: 4.3.0
       escalade: 3.1.1
+    dev: false
+
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.7:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.2.7
     dev: false
 
   /@trysound/sax/0.2.0:
@@ -2463,6 +2474,11 @@ packages:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
     engines: {node: '>=10'}
     dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
 
   /minimist/1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
