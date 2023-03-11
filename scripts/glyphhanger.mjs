@@ -3,7 +3,7 @@ import fs from 'fs';
 
 // Define the command to run
 const fontsDir = './dist/fonts';
-const command = `glyphhanger ./dist/index.html --string --jsdom --cssSelector=".font-fira, .font-fira *" --subset=${fontsDir}/*.woff2 --output=${fontsDir}`;
+const command = `glyphhanger ./dist/index.html --string --jsdom --cssSelector=".font-display, .font-display *" --subset=${fontsDir}/jomhuria.woff2 --output=${fontsDir}`;
 // Run the command
 console.log('Running command...');
 execSync(command, { stdio: 'inherit' });
