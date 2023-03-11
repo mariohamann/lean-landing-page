@@ -1,3 +1,22 @@
+<script>
+	document.querySelector("form").addEventListener("submit", (_event) => {
+		_event.preventDefault();
+		fetch("https://submit-form.com/echo", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+			body: JSON.stringify({
+				message: _event.target[0].value,
+			}),
+		})
+			.then(() => window.alert("Thank you for subscribing!"))
+			.catch(() =>
+				window.alert("Something went wrong. Please try again later.")
+			);
+	});
+</script>
 <div class='bg-indigo-700'>
 	<div class='pb-24 px-6 sm:px-6 sm:pb-32 lg:px-8'>
 		<div class='mx-auto max-w-2xl text-center'>
