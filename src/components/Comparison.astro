@@ -12,15 +12,13 @@ const { title, percentage, description } = Astro.props;
 	const bars = document.querySelectorAll(".animatable-bar");
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			console.log("observed", { bars });
 			if (entry.isIntersecting) {
 				const bar = entry.target;
 				bar.classList.add("animate-bar");
-				// observer.unobserve(bar);
+				observer.unobserve(bar);
 			}
 		});
 	});
-	console.log(bars);
 	bars.forEach((bar) => observer.observe(bar));
 </script>
 

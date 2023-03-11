@@ -5,25 +5,6 @@ const SUBMIT_FORM_URL = import.meta.env.PROD
 	: "https://submit-form.com/echo";
 ---
 
-<script>
-	document.querySelector("form").addEventListener("submit", (_event) => {
-		_event.preventDefault();
-		fetch(_event.srcElement.dataset.url, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: JSON.stringify({
-				message: _event.target[0].value,
-			}),
-		})
-			.then(() => window.alert("Thank you for subscribing!"))
-			.catch(() =>
-				window.alert("Something went wrong. Please try again later.")
-			);
-	});
-</script>
 <div class='bg-indigo-700'>
 	<div class='pb-24 px-6 sm:px-6 sm:pb-32 lg:px-8'>
 		<div class='mx-auto max-w-2xl text-center'>
@@ -33,7 +14,7 @@ const SUBMIT_FORM_URL = import.meta.env.PROD
 				ABOUT
 			</h2>
 			<p
-				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-200 tracking-wide'
+				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
 			>
 				Laborum reprehenderit culpa aliquip ea excepteur exercitation
 				aute nostrud consectetur. Id sunt in ea aute anim exercitation.
@@ -54,15 +35,35 @@ const SUBMIT_FORM_URL = import.meta.env.PROD
 					type='email'
 					autocomplete='email'
 					required
-					class='min-w-0 flex-auto rounded-l-2xl text-base border-0 bg-sec-900/5 px-5 py-4 text-sec-100 shadow-sm ring-1 ring-inset ring-sec-200 focus:ring-2 focus:ring-inset focus:ring-sec-50 sm:leading-6'
+					class='min-w-0 flex-auto rounded-l-2xl text-base border-0 bg-sec-900/5 px-5 py-4 text-sec-100 shadow-sm ring-1 ring-inset ring-sec-100 focus:ring-2 focus:ring-inset focus:ring-sec-50 sm:leading-6'
 					placeholder='Enter your email'
 				/>
 				<button
 					type='submit'
-					class='flex-none rounded-r-2xl uppercase bg-sec-200 py-4 px-7 text-base font-bold text-sec-900 shadow-sm hover:bg-sec-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sec-50'
+					class='flex-none rounded-r-2xl uppercase bg-sec-100 py-4 px-7 text-base font-bold text-sec-900 shadow-sm hover:bg-sec-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sec-50'
 					>Subscribe</button
 				>
 			</form>
 		</div>
 	</div>
 </div>
+
+<script>
+	document.querySelector("form").addEventListener("submit", (_event) => {
+		_event.preventDefault();
+		fetch(_event.srcElement.dataset.url, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+			body: JSON.stringify({
+				message: _event.target[0].value,
+			}),
+		})
+			.then(() => window.alert("Thank you for subscribing!"))
+			.catch(() =>
+				window.alert("Something went wrong. Please try again later.")
+			);
+	});
+</script>
