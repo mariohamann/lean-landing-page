@@ -13,28 +13,11 @@ import Detail from "../components/Detail.astro";
 			<p
 				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
 			>
-				Here's a breakdown of the technology used to build this webpage:
-				I chose <strong>Vanilla JS</strong> over JS frameworks, but used
-				<strong>TailwindCSS</strong>
-				for CSS styling because I enjoy working with it. The site was generated
-				statically with <strong>Astrl</strong> and deployed using <strong
-					>Cloudflare Pages</strong
-				>. The accordions in this section were built with the native
-				<strong>&lt;detail&gt;</strong>-element. Subscribing the
-				newsletter is a super simple <strong>fetch with an alert</strong
-				>. There's no tracking at the moment. The hero (AI-)image was
-				optimized using
-				<strong>Image Tool+</strong>, and all fonts were subset using <strong
-					>glyphhanger</strong
-				>. Finally, all assets and HTML were <strong
-					>minified and pre-gzipped</strong
-				>.
-			</p>
-			<p
-				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
-			>
-				From a broader perspective, I more or less followed these
-				principles:
+				A great starting point is the <a
+					href='https://www.sustainablewebmanifesto.com'
+					>Sustainable Web Manifesto</a
+				>, which summarizes more or less what I'm trying. From my own
+				perspective, I more or less follow these principles:
 			</p>
 		</div>
 		<div class='mx-auto max-w-2xl divide-y divide-white/10'>
@@ -45,13 +28,50 @@ import Detail from "../components/Detail.astro";
 				/>
 				<Detail
 					title='Iterate + stop.'
-					content="It's easy to get caught up in the pursuit of perfection and continuously iterate to make improvements. (Trust me, there are lots of enjoyable rabbit holes!) However, it's important to know when to stop and determine whether the improvements are worth the effort."
+					content="It's easy to get caught up in the pursuit of perfection and continuously iterate to make improvements. (Trust me, there are lots of <a href='https://dev.to/tigt/making-the-worlds-fastest-website-and-other-mistakes-56na'>enjoyable</a> <a href='https://endtimes.dev/why-your-website-should-be-under-14kb-in-size/'>rabbit</a> <a href='https://developers.google.com/speed/docs/insights/mobile'>holes</a> out there!) However, it's important to know when to stop and determine whether the improvements are worth the effort."
 				/>
 				<Detail
 					title='Expand + focus.'
-					content='Broadening the focus to consider all aspects of performance, such as images, fonts, CSS, and JS, is critical. While some elements may have a greater impact on page weight (such as images and fonts), others may affect reactivity (such as JS). Keeping everything in mind, but focusing on one element at a time, helps to improve without losing sanity.'
+					content='Broadening the focus to consider all aspects of performance, such as images, fonts, CSS, and JS, is critical. While some elements may have a greater impact on page weight (such as images and fonts), others may affect reactivity (such as <a href="https://infrequently.org/2021/03/the-performance-inequality-gap/#hardware-destiny">JS</a>). Keeping everything in mind, but focusing on one element at a time, helps to improve without losing sanity.'
 				/>
 			</div>
+		</div>
+		<div class='mx-auto max-w-2xl text-center'>
+			<p
+				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
+			>
+				From a tech perspectiva, here's a breakdown of the technology
+				used to build this webpage: I chose <a
+					href='http://vanilla-js.com'>Vanilla JS</a
+				> over JS frameworks, but used
+				<a href='https://tailwindcss.com'>TailwindCSS</a>
+				for CSS styling because I enjoy working with it. The site was generated
+				statically with <a href='https://astro.build'>Astro</a> and deployed
+				on <a
+					href='https://blog.cloudflare.com/de-de/green-hosting-with-cloudflare-pages-de-de/'
+					>green-hosted Cloudflare Pages</a
+				>. The accordions in this section were built with the native
+				<a
+					href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details'
+					>&lt;detail&gt;</a
+				>-element. Subscribing the newsletter is a super simple <a
+					href='https://documentation.formspark.io/examples/ajax.html#fetch'
+					>fetch</a
+				> with a native alert for send confirmation. There's no tracking
+				at the moment. The hero (AI generated) image was optimized using
+				<a
+					href='https://apps.apple.com/us/app/image-tool/id1524216218?mt=12'
+					>Image Tool+</a
+				>, and all fonts were subset using <a
+					href='https://github.com/zachleat/glyphhanger'
+					>glyphhanger</a
+				>. Finally, all assets and HTML were <a
+					href='https://github.com/astro-community/astro-compress#readme'
+					>minified</a
+				> and <a href='https://github.com/sondr3/astro-compressor'
+					>pre-gzipped</a
+				>.
+			</p>
 		</div>
 	</div>
 </div>
