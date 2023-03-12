@@ -3,9 +3,10 @@ export interface Props {
 	title: string;
 	percentage: number;
 	description: string;
+	data: string;
 }
 
-const { title, percentage, description } = Astro.props;
+const { title, percentage, description, data } = Astro.props;
 ---
 
 <script>
@@ -52,5 +53,7 @@ const { title, percentage, description } = Astro.props;
 			</div>
 		</div>
 	</div>
-	<div class='text-center mt-2 text-sec-900'>{description}</div>
+	<div class='text-center mt-2 text-sec-900'>
+		{description} (<a class='underline' href={data}>source</a>)
+	</div>
 </div>

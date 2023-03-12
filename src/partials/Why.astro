@@ -11,31 +11,36 @@ import Comparison from "../components/Comparison.astro";
 				WHY
 			</h2>
 			<p class='mx-auto mt-6 max-w-xl text-lg leading-8 text-sec'>
-				Esse magna occaecat laborum cillum exercitation occaecat
-				proident culpa. Elit ut amet id ex adipisicing. Proident
-				exercitation eu ut exercitation ut magna et aliquip ea magna
-				enim id. Elit enim sunt nulla adipisicing sit mollit
-				reprehenderit laboris duis pariatur. Occaecat minim excepteur ex
-				sit ipsum aliqua commodo ullamco. Esse aliquip tempor laboris
-				ullamco nostrud fugiat labore.
+				When it comes to building websites, it's easy to fall into the
+				trap of bloat. But too many unnecessary elements, large file
+				sizes, and slow loading times can turn users away and harm the
+				environment. I'm convinced that we can achieve both speed and
+				minimal environmental impact, without compromising on usability
+				or design.
+			</p><p class='mx-auto mt-6 max-w-xl text-lg leading-8 text-sec'>
+				To give you an idea of how this landing page stacks up against
+				others, here's a comparison with an average website:
 			</p>
 			<div
 				class='mt-10 flex flex-col items-center justify-center gap-y-8'
 			>
 				<Comparison
-					title='Page weight'
-					percentage={56 / 2000}
-					description='56 vs. 2000 kB'
+					title='Page weight (mobile)'
+					percentage={56 / 2019}
+					description='56 kB vs. 2019 kB'
+					data='https://almanac.httparchive.org/en/2022/page-weight#fig-4'
 				/>
 				<Comparison
 					title='CO<sub>2</sub> per visit'
 					percentage={0.01 / 1.76}
-					description='0.01 vs. 1.76 g'
+					description='0.01 g vs. 1.76 g'
+					data='https://www.wholegraindigital.com/digitaldeclutter/#websites'
 				/>
 				<Comparison
 					title='Time to interactive (mobile)'
-					percentage={0.3 / 15.2}
-					description='0.3 vs. 15.2 sec'
+					percentage={0.3 / 12.7}
+					description='0.3 sec vs. 12.7 sec'
+					data='https://httparchive.org/reports/loading-speed#ttci'
 				/>
 			</div>
 		</div>
