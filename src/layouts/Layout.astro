@@ -11,9 +11,31 @@ const { title } = Astro.props;
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='icon' type='image/png' href='/favicon.png' />
 		<meta name='generator' content={Astro.generator} />
+		<meta
+			name='description'
+			content='Highly-optimized, lightning-fast and eco-friendly landing pages. Join the movement to create better websites with minimal environmental impact.'
+		/>
 		<title>{title}</title>
+		<!-- Open Graph / Facebook -->
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://leanlanding.page/' />
+		<meta property='og:title' content='leanlanding.page' />
+		<meta
+			property='og:description'
+			content='Highly-optimized, lightning-fast and eco-friendly landing pages.'
+		/>
+		<meta property='og:image' content='/img/opengraph.jpg' />
+		<!-- Twitter -->
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:url' content='https://leanlanding.page/' />
+		<meta property='twitter:title' content='leanlanding.page' />
+		<meta
+			property='twitter:description'
+			content='Highly-optimized, lightning-fast and eco-friendly landing pages.'
+		/>
+		<meta property='twitter:image' content='/img/opengraph.jpg' />
 	</head>
 	<body>
 		<slot />

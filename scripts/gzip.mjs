@@ -19,7 +19,7 @@ function traverseFolder(folderPath) {
   const files = readdirSync(folderPath, { withFileTypes: true });
 
   files.forEach((file) => {
-    if (file.name.endsWith('.br') || file.name.endsWith('.gz') || file.name.endsWith('.woff') || file.name.endsWith('.DS_Store')) return; // Skip brotli and gzip files (if any
+    if (file.name.endsWith('.br') || file.name.endsWith('.gz') || file.name.endsWith('.woff') || file.name.endsWith('.DS_Store') || file.name.endsWith('opengraph.jpg')) return; // Skip brotli and gzip files (if any
 
     // check if jpg exists as webp in same folder
     if (file.name.endsWith('.jpg') && files.find((f) => f.name === `${file.name.split('.jpg')[0]}.webp`)) return; // Skip jpg if webp exists
