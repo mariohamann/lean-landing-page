@@ -2,4 +2,7 @@
 
 ## Prerequisite for glyphhanger
 
-`pip3 install fonttools && pip3 install brotli && pip3 install zopfli && pnpm install -g glyphhanger`
+`pip3 install fonttools brotli zopfli && pnpm install -g glyphhanger`
+
+If the error `pyftsubset from fonttools is required for the --subset feature` appears on building, do:
+`sudo su -` and then `python3 -m pip install fonttools brotli zopfli`

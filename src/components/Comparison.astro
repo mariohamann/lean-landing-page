@@ -9,36 +9,6 @@ export interface Props {
 const { title, percentage, description, data } = Astro.props;
 ---
 
-<script>
-	const bars = document.querySelectorAll(".animatable-bar");
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				const bar = entry.target;
-				bar.classList.add("animate-bar");
-				observer.unobserve(bar);
-			}
-		});
-	});
-	bars.forEach((bar) => observer.observe(bar));
-</script>
-
-<style>
-	.animate-bar {
-		animation: fill-bar 2.5s ease-out;
-		animation-fill-mode: forwards;
-	}
-
-	@keyframes fill-bar {
-		from {
-			width: 100%;
-		}
-		to {
-			width: var(--percentage, 0%);
-		}
-	}
-</style>
-
 <div class='w-full'>
 	<h3
 		class='text-left font-bold text-lg tracking-wider mb-3'
@@ -57,3 +27,33 @@ const { title, percentage, description, data } = Astro.props;
 		{description} (<a href={data}>source</a>)
 	</div>
 </div>
+
+<script>
+	const bars = document.querySelectorAll(".animatable-bar");
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const bar = entry.target;
+				bar.classList.add("animate-bar");
+				observer.unobserve(bar);
+			}
+		});
+	});
+	bars.forEach((bar) => observer.observe(bar));
+</script>
+
+<style>
+	.animate-bar {
+		animation: fill-bar 1.25s ease-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fill-bar {
+		from {
+			width: 100%;
+		}
+		to {
+			width: var(--percentage, 0%);
+		}
+	}
+</style>

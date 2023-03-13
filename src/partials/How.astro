@@ -13,11 +13,18 @@ import Detail from "../components/Detail.astro";
 			<p
 				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
 			>
-				A great starting point is the <a
-					href='https://www.sustainablewebmanifesto.com'
+				The <a href='https://www.sustainablewebmanifesto.com'
 					>Sustainable Web Manifesto</a
-				>, which summarizes more or less what I'm trying. From my own
-				perspective, I more or less follow these principles:
+				> gives a good overview of what I'm trying to do. Furthermore Jeremy
+				Keith's take on <a href='https://resilientwebdesign.com/'
+					>Resilient Web Design</a
+				> influenced me a lot on how to develop. Especially this sentence:
+				"[with Progressive enhancement] the resulting website will look different
+				in different browsers. [...] And that's okay".
+			</p><p
+				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
+			>
+				On top I more or less follow these principles:
 			</p>
 		</div>
 		<div class='mx-auto max-w-2xl divide-y divide-white/10'>
@@ -40,10 +47,10 @@ import Detail from "../components/Detail.astro";
 			<p
 				class='mx-auto mt-6 max-w-3xl text-lg leading-8 text-sec-100 tracking-wide'
 			>
-				From a tech perspectiva, here's a breakdown of the technology
-				used to build this webpage: I chose <a
-					href='http://vanilla-js.com'>Vanilla JS</a
-				> over JS frameworks, but used
+				From a technical perspective, here's a breakdown of the
+				technology used to build this webpage: I chose <a
+					href='http://vanilla-js.com'>pure JS</a
+				> with no polyfills over JS frameworks, but used
 				<a href='https://tailwindcss.com'>TailwindCSS</a>
 				for CSS styling because I enjoy working with it. The site was generated
 				statically with <a href='https://astro.build'>Astro</a> and deployed
@@ -54,7 +61,7 @@ import Detail from "../components/Detail.astro";
 				<a
 					href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details'
 					>&lt;detail&gt;</a
-				>-element. Subscribing the newsletter is a super simple <a
+				>-element. Subscribing the newsletter is a simple <a
 					href='https://documentation.formspark.io/examples/ajax.html#fetch'
 					>fetch</a
 				> with a native alert for send confirmation. There's no tracking
